@@ -14,4 +14,8 @@ class User < ActiveRecord::Base
     # Again, saving token is optional. If you haven't created the column in authentications table, this will fail
     authentications.build(:provider => auth['provider'], :uid => auth['uid'], :token => auth['credentials']['token'])
   end
+
+  def full_name
+    "#{first_name} #{last_name}"
+  end
 end

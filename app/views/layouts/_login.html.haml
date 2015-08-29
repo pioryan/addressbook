@@ -1,0 +1,6 @@
+= form_tag session_path(:user), class: "navbar-form navbar-right" do
+  .form-group
+    = text_field_tag 'user[email]', nil, class: "form-control"
+  .form-group
+    = password_field_tag 'user[password]', nil, class: "form-control"
+  %button.btn.btn-success Sign in
